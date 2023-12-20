@@ -1,6 +1,6 @@
 # Product Review
 
-Review page i made inspired by Frontend Mentor challenge. You can take a look at it following this link: link
+Review page i made inspired by Frontend Mentor challenge. You can take a look at it following this link: https://astro-dust.github.io/Product-Review/
 
 ## Desktop
 

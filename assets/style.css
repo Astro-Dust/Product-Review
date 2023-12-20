@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+:root {
+  --font1: "Fraunces", serif;
+  --font2: "Montserrat", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(242, 235, 227);
+}
+
+.container {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 500px;
+}
+
+/* CONTENT LEFT IMAGE */
+
+.content-left-image {
+  flex: 1;
+}
+
+.content-left-image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+/* CONTENT RIGHT */
+
+.content-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  padding: 30px;
+  background-color: #fff;
+  height: 100%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.content-right-item-name {
+  width: fit-content;
+}
+
+.content-right-item-name > p {
+  font-family: var(--font2);
+  color: #5c5c5c;
+  letter-spacing: 5px;
+}
+
+.content-right-item-title {
+  width: 200px;
+}
+
+.content-right-item-title > h2 {
+  font-family: var(--font1);
+  color: #2b2b2b;
+  font-size: 30px;
+}
+
+.content-right-item-description {
+  width: 280px;
+}
+
+.content-right-item-description > p {
+  font-family: var(--font2);
+  color: #5c5c5c;
+  letter-spacing: 1px;
+  font-size: 15px;
+}
+
+.content-right-item-discount {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.content-right-item-discount > h2 {
+  color: rgb(60, 128, 103);
+  font-size: 30px;
+  font-family: var(--font1);
+}
+
+.content-right-item-discount > h4 {
+  font-family: var(--font2);
+  font-size: 15px;
+  font-weight: normal;
+  color: #2b2b2b;
+}
+
+.content-right-item-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.content-right-item-button > span {
+  display: flex;
+  align-items: center;
+}
+
+.content-right-item-button > button {
+  padding: 15px 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(60, 128, 103);
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background-color 0.4s ease-out;
+  align-items: center;
+  width: 100%;
+}
+
+.content-right-item-button > button:hover {
+  background-color: rgb(44, 95, 76);
+}
+
+.content-right-item-button > button::before {
+  content: url("./imgs/icon-cart.svg");
+  padding-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .content-left-image > img {
+    content: url("./imgs/image-product-mobile.jpg");
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 0;
+  }
+
+  .content-right {
+    border-top-right-radius: 0;
+  }
+
+  .content-right-item-title {
+    width: 300px;
+  }
+}
